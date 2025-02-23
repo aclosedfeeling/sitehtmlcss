@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration - Mirage Travel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Panel Administrateur</h1>
+        <img src="logo.png" alt="Mirage Travel Logo" class="site-logo">
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="admin.html">Administration</a></li>
+            <li><a href="login.html">Déconnexion</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <img src="image10.jpg" alt="Dashboard administrateur" class="hero-image">
+        
+        <h2>Gestion des utilisateurs</h2>
+        
+        <table class="admin-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nom</th>
+                    <th>Email</th>
+                    <th>Statut</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Jean Dupont</td>
+                    <td>jean.dupont@email.com</td>
+                    <td>Client VIP</td>
+                    <td>
+                        <button>Modifier VIP</button>
+                        <button>Bannir</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Marie Martin</td>
+                    <td>marie.martin@email.com</td>
+                    <td>Client standard</td>
+                    <td>
+                        <button>Modifier VIP</button>
+                        <button>Bannir</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Pierre Durand</td>
+                    <td>pierre.durand@email.com</td>
+                    <td>Banni</td>
+                    <td>
+                        <button>Modifier VIP</button>
+                        <button>Débannir</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Mirage Travel - Tous droits réservés</p>
+    </footer>
+</body>
+</html>

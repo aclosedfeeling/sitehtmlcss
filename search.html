@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche - Mirage Travel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Rechercher un voyage</h1>
+        <img src="logo.png" alt="Mirage Travel Logo" class="site-logo">
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="search.html">Rechercher</a></li>
+            <li><a href="register.html">S'inscrire</a></li>
+            <li><a href="login.html">Se connecter</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="destinations-preview">
+            <img src="image5.jpg" alt="Sahara" class="destination-image">
+            <img src="image6.jpg" alt="Désert de Gobi" class="destination-image">
+            <img src="image7.jpg" alt="Désert d'Atacama" class="destination-image">
+        </div>
+
+        <div class="form-container">
+            <form>
+                <div class="form-group">
+                    <label for="destination">Destination :</label>
+                    <select id="destination">
+                        <option>Sahara</option>
+                        <option>Désert de Gobi</option>
+                        <option>Désert d'Atacama</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="date-depart">Date de départ :</label>
+                    <input type="date" id="date-depart">
+                </div>
+
+                <div class="form-group">
+                    <label for="duree">Durée :</label>
+                    <select id="duree">
+                        <option>3-5 jours</option>
+                        <option>6-10 jours</option>
+                        <option>11-15 jours</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="budget">Budget maximum :</label>
+                    <input type="number" id="budget" placeholder="En euros">
+                </div>
+
+                <div class="form-group">
+                    <label for="type">Type de voyage :</label>
+                    <select id="type">
+                        <option>Aventure</option>
+                        <option>Culturel</option>
+                        <option>Photographique</option>
+                    </select>
+                </div>
+
+                <button type="submit">Rechercher</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Mirage Travel - Tous droits réservés</p>
+    </footer>
+</body>
+</html>
