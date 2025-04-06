@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recherche - Mirage Travel</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -14,15 +15,17 @@
     
     <nav>
         <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="about.html">À propos</a></li>
-            <li><a href="search.html">Rechercher</a></li>
-            <li><a href="register.html">S'inscrire</a></li>
-            <li><a href="login.html">Se connecter</a></li>
+            <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> À propos</a></li>
+            <li><a href="search.html"><i class="fas fa-search"></i> Rechercher</a></li>
+            <li><a href="register.html"><i class="fas fa-user-plus"></i> S'inscrire</a></li>
+            <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Se connecter</a></li>
         </ul>
     </nav>
 
     <div class="container">
+        <h2 class="text-center mb-5">Trouvez l'aventure de vos rêves</h2>
+        
         <div class="destinations-preview">
             <img src="image5.jpg" alt="Sahara" class="destination-image">
             <img src="image6.jpg" alt="Désert de Gobi" class="destination-image">
@@ -30,51 +33,101 @@
         </div>
 
         <div class="form-container">
+            <h3 class="text-center mb-5">Filtrer les voyages</h3>
+            
             <form>
                 <div class="form-group">
-                    <label for="destination">Destination :</label>
+                    <label for="destination"><i class="fas fa-map-marker-alt"></i> Destination :</label>
                     <select id="destination">
+                        <option value="">Toutes les destinations</option>
                         <option>Sahara</option>
                         <option>Désert de Gobi</option>
                         <option>Désert d'Atacama</option>
+                        <option>Wadi Rum</option>
+                        <option>Désert du Namib</option>
                     </select>
                 </div>
                 
                 <div class="form-group">
-                    <label for="date-depart">Date de départ :</label>
+                    <label for="date-depart"><i class="fas fa-calendar-alt"></i> Date de départ :</label>
                     <input type="date" id="date-depart">
                 </div>
 
                 <div class="form-group">
-                    <label for="duree">Durée :</label>
+                    <label for="duree"><i class="fas fa-clock"></i> Durée :</label>
                     <select id="duree">
+                        <option value="">Toutes les durées</option>
                         <option>3-5 jours</option>
                         <option>6-10 jours</option>
                         <option>11-15 jours</option>
+                        <option>Plus de 15 jours</option>
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label for="budget">Budget maximum :</label>
-                    <input type="number" id="budget" placeholder="En euros">
+                    <label for="budget"><i class="fas fa-euro-sign"></i> Budget maximum :</label>
+                    <input type="range" id="budget" min="500" max="5000" step="100" value="2000">
+                    <div style="display: flex; justify-content: space-between; margin-top: 5px;">
+                        <span>500€</span>
+                        <span id="budget-value">2000€</span>
+                        <span>5000€</span>
+                    </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="type">Type de voyage :</label>
+                    <label for="type"><i class="fas fa-hiking"></i> Type de voyage :</label>
                     <select id="type">
+                        <option value="">Tous les types</option>
                         <option>Aventure</option>
                         <option>Culturel</option>
                         <option>Photographique</option>
+                        <option>Bien-être</option>
+                        <option>Gastronomique</option>
                     </select>
                 </div>
 
-                <button type="submit">Rechercher</button>
+                <div class="text-center">
+                    <button type="submit"><i class="fas fa-search"></i> Rechercher</button>
+                </div>
             </form>
+        </div>
+        
+        <div class="featured-trips mt-5">
+            <h2 class="text-center" style="grid-column: 1 / -1;">Résultats populaires</h2>
+            
+            <div class="trip-card">
+                <img src="image2.jpg" alt="Traversée du Sahara" class="trip-image">
+                <h3>Traversée du Sahara</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Maroc</p>
+                <p><i class="fas fa-calendar-alt"></i> 7 jours</p>
+                <p><i class="fas fa-euro-sign"></i> À partir de 1200€</p>
+                <button><i class="fas fa-info-circle"></i> Détails</button>
+            </div>
+            
+            <div class="trip-card">
+                <img src="image3.jpg" alt="Nuit dans le désert" class="trip-image">
+                <h3>Nuit sous les étoiles</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Tunisie</p>
+                <p><i class="fas fa-calendar-alt"></i> 3 jours</p>
+                <p><i class="fas fa-euro-sign"></i> À partir de 650€</p>
+                <button><i class="fas fa-info-circle"></i> Détails</button>
+            </div>
+            
+            <div class="trip-card">
+                <img src="image7.jpg" alt="Désert d'Atacama" class="trip-image">
+                <h3>Merveilles d'Atacama</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Chili</p>
+                <p><i class="fas fa-calendar-alt"></i> 10 jours</p>
+                <p><i class="fas fa-euro-sign"></i> À partir de 2500€</p>
+                <button><i class="fas fa-info-circle"></i> Détails</button>
+            </div>
         </div>
     </div>
 
     <footer>
         <p>&copy; 2025 Mirage Travel - Tous droits réservés</p>
     </footer>
+    
+
 </body>
 </html>

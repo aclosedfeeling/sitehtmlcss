@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>À propos - Mirage Travel</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -14,30 +15,65 @@
     
     <nav>
         <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="about.html">À propos</a></li>
-            <li><a href="search.html">Rechercher</a></li>
-            <li><a href="register.html">S'inscrire</a></li>
-            <li><a href="login.html">Se connecter</a></li>
+            <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> À propos</a></li>
+            <li><a href="search.html"><i class="fas fa-search"></i> Rechercher</a></li>
+            <li><a href="register.html"><i class="fas fa-user-plus"></i> S'inscrire</a></li>
+            <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Se connecter</a></li>
         </ul>
     </nav>
 
     <div class="container">
         <section>
-            <h2>Notre mission</h2>
+            <h2 class="text-center">Notre mission</h2>
             <img src="image4.jpg" alt="Notre équipe dans le désert" class="about-image">
-            <p>Mirage Travel est votre spécialiste des voyages dans le désert. Nous proposons des circuits uniques pour découvrir la beauté et la sérénité des paysages désertiques.</p>
+            
+            <div class="profile-section">
+                <h3><i class="fas fa-compass"></i> Qui sommes-nous ?</h3>
+                <p>Mirage Travel est votre spécialiste des voyages dans le désert depuis 2015. Fondée par des passionnés d'aventure et de grands espaces, notre agence propose des circuits uniques pour découvrir la beauté et la sérénité des paysages désertiques.</p>
+                
+                <h3><i class="fas fa-heart"></i> Notre passion</h3>
+                <p>Notre passion pour les déserts nous pousse à explorer continuellement de nouveaux horizons pour vous offrir des expériences inédites. Nous sommes convaincus que ces espaces immenses et préservés offrent parmi les plus belles expériences de voyage.</p>
+                
+                <h3><i class="fas fa-leaf"></i> Notre engagement</h3>
+                <p>Nous nous engageons à proposer des voyages responsables, respectueux des populations locales et des écosystèmes fragiles. Tous nos circuits sont conçus en partenariat avec des acteurs locaux et visent à minimiser notre impact environnemental.</p>
+            </div>
         </section>
 
         <section>
-            <h2>Recherche rapide</h2>
+            <h2 class="text-center mt-5">Nos destinations</h2>
+            <div class="featured-trips">
+                <div class="trip-card">
+                    <img src="image5.jpg" alt="Sahara" class="trip-image">
+                    <h3>Sahara</h3>
+                    <p>Le plus grand désert chaud du monde, offrant des paysages de dunes spectaculaires et une culture berbère riche.</p>
+                </div>
+                
+                <div class="trip-card">
+                    <img src="image6.jpg" alt="Désert de Gobi" class="trip-image">
+                    <h3>Désert de Gobi</h3>
+                    <p>Ce désert asiatique offre des paysages variés, des dunes aux montagnes rocheuses, et une faune étonnante.</p>
+                </div>
+                
+                <div class="trip-card">
+                    <img src="image7.jpg" alt="Désert d'Atacama" class="trip-image">
+                    <h3>Atacama</h3>
+                    <p>Le désert le plus aride au monde, avec ses paysages lunaires, ses geysers et ses lagunes roses.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-center mt-5">Recherche rapide</h2>
             <div class="form-container">
                 <form>
                     <div class="form-group">
-                        <label for="quick-search">Rechercher un voyage :</label>
+                        <label for="quick-search"><i class="fas fa-search"></i> Rechercher un voyage :</label>
                         <input type="text" id="quick-search" placeholder="Ex: Sahara, Camping, 7 jours...">
                     </div>
-                    <button type="submit">Rechercher</button>
+                    <div class="text-center">
+                        <button type="submit"><i class="fas fa-search"></i> Rechercher</button>
+                    </div>
                 </form>
             </div>
         </section>

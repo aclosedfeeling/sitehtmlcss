@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mirage Travel - Voyages dans le désert</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -15,30 +16,44 @@
     
     <nav>
         <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="about.html">À propos</a></li>
-            <li><a href="search.html">Rechercher</a></li>
-            <li><a href="register.html">S'inscrire</a></li>
-            <li><a href="login.html">Se connecter</a></li>
+            <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> À propos</a></li>
+            <li><a href="search.html"><i class="fas fa-search"></i> Rechercher</a></li>
+            <li><a href="register.html"><i class="fas fa-user-plus"></i> S'inscrire</a></li>
+            <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Se connecter</a></li>
         </ul>
     </nav>
 
     <div class="container">
         <img src="image1.jpg" alt="Vue panoramique du désert" class="hero-image">
         
+        <section>
+            <h2 class="text-center mb-5">Bienvenue au cœur du désert</h2>
+            <p>Chez Mirage Travel, nous vous proposons des aventures extraordinaires au cœur des plus beaux déserts du monde. Que vous rêviez d'admirer les étoiles du Sahara, de découvrir les paysages lunaires du désert d'Atacama ou d'explorer les vastes étendues du désert de Gobi, nos circuits soigneusement élaborés vous permettront de vivre une expérience inoubliable.</p>
+        </section>
+        
         <section class="featured-trips">
-            <h2>Nos voyages à la une</h2>
+            <h2 class="text-center" style="grid-column: 1 / -1;">Nos voyages à la une</h2>
+            
             <div class="trip-card">
                 <img src="image2.jpg" alt="Traversée du Sahara" class="trip-image">
                 <h3>Traversée du Sahara</h3>
-                <p>Une aventure inoubliable de 7 jours à travers les dunes majestueuses</p>
-                <button>En savoir plus</button>
+                <p>Une aventure inoubliable de 7 jours à travers les dunes majestueuses du plus grand désert chaud du monde. Vivez l'expérience d'une nuit sous les étoiles et découvrez la culture berbère.</p>
+                <button><i class="fas fa-info-circle"></i> En savoir plus</button>
             </div>
+            
             <div class="trip-card">
                 <img src="image3.jpg" alt="Nuit dans le désert" class="trip-image">
                 <h3>Nuit sous les étoiles</h3>
-                <p>Découvrez le ciel nocturne comme jamais auparavant</p>
-                <button>En savoir plus</button>
+                <p>Découvrez le ciel nocturne comme jamais auparavant lors de cette expérience unique. Nos guides astronomes vous feront découvrir les constellations dans l'un des ciels les plus purs au monde.</p>
+                <button><i class="fas fa-info-circle"></i> En savoir plus</button>
+            </div>
+            
+            <div class="trip-card">
+                <img src="image 8.jpg" alt="Désert de Wadi Rum" class="trip-image">
+                <h3>Expédition Wadi Rum</h3>
+                <p>Explorez le magnifique désert de Jordanie connu pour ses formations rocheuses spectaculaires et ses couleurs flamboyantes. Une immersion complète de 5 jours dans un paysage à couper le souffle.</p>
+                <button><i class="fas fa-info-circle"></i> En savoir plus</button>
             </div>
         </section>
     </div>
