@@ -1,0 +1,75 @@
+[
+    {
+        "id": 1,
+        "login": "admin",
+        "password": "admin123",
+        "role": "admin",
+        "nom": "Admin",
+        "prenom": "Principal",
+        "email": "admin@miragetravel.com",
+        "telephone": "0612345678",
+        "date_inscription": "2024-04-01",
+        "derniere_connexion": "2024-04-20",
+        "status": "active"
+    },
+    {
+        "id": 2,
+        "login": "admin2",
+        "password": "admin456",
+        "role": "admin",
+        "nom": "Admin",
+        "prenom": "Secondaire",
+        "email": "admin2@miragetravel.com",
+        "telephone": "0687654321",
+        "date_inscription": "2024-04-02",
+        "derniere_connexion": "2024-04-19",
+        "status": "active"
+    },
+    {
+        "id": 3,
+        "login": "jean.dupont",
+        "password": "jean123",
+        "role": "user",
+        "nom": "Dupont",
+        "prenom": "Jean",
+        "email": "jean.dupont@email.com",
+        "telephone": "0612345678",
+        "date_inscription": "2024-03-15",
+        "derniere_connexion": "2024-04-20",
+        "destinations_favorites": [
+            "Sahara",
+            "D\u00e9sert de Gobi"
+        ],
+        "types_voyage_preferes": [
+            "Aventure",
+            "Photographie"
+        ],
+        "status": "vip"
+    },
+    {
+        "id": 4,
+        "login": "marie.martin",
+        "password": "marie123",
+        "role": "user",
+        "nom": "Martin",
+        "prenom": "Marie",
+        "email": "marie.martin@email.com",
+        "telephone": "0698765432",
+        "date_inscription": "2024-03-22",
+        "derniere_connexion": "2024-04-18",
+        "status": "standard"
+    },
+    {
+        "id": 5,
+        "login": "pierre.durand",
+        "password": "pierre123",
+        "role": "user",
+        "nom": "Durand",
+        "prenom": "Pierre",
+        "email": "pierre.durand@email.com",
+        "telephone": "0634567891",
+        "date_inscription": "2024-01-10",
+        "derniere_connexion": "2024-03-05",
+        "status": "banned"
+    }
+]

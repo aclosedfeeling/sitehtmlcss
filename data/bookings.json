@@ -1,0 +1,57 @@
+[
+    {
+      "id": 1,
+      "user_id": 3,
+      "trip_id": 1,
+      "date_reservation": "2024-03-20",
+      "prix_total": 1450,
+      "nb_personnes": 2,
+      "date_depart": "2024-06-15",
+      "date_retour": "2024-06-22",
+      "statut": "payé",
+      "options_choisies": [
+        {
+          "etape_id": 0,
+          "hebergement": "Hôtel 3*",
+          "restauration": "Demi-pension",
+          "activites": ["Visite guidée de la médina"]
+        },
+        {
+          "etape_id": 1,
+          "hebergement": "Hôtel standard",
+          "restauration": "Pension complète",
+          "transport": "4x4 partagé"
+        },
+        {
+          "etape_id": 2,
+          "hebergement": "Campement standard",
+          "restauration": "Pension complète",
+          "activites": ["Balade à dos de dromadaire", "Initiation au sandboard"]
+        },
+        {
+          "etape_id": 3,
+          "hebergement": "Campement nomade",
+          "restauration": "Pension complète",
+          "activites": ["Coucher de soleil dans les dunes", "Soirée astronomie"]
+        },
+        {
+          "etape_id": 4,
+          "hebergement": "Auberge locale",
+          "restauration": "Pension complète",
+          "activites": ["Visite du village"],
+          "transport": "4x4 standard"
+        },
+        {
+          "etape_id": 5,
+          "hebergement": "Hôtel 3*",
+          "restauration": "Demi-pension",
+          "activites": ["Hammam traditionnel"]
+        }
+      ],
+      "paiement": {
+        "date": "2024-03-20",
+        "montant": 1450,
+        "methode": "Carte Bancaire"
+      }
+    }
+  ]
