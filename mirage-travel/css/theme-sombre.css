@@ -1,0 +1,195 @@
+/* colors principales de ce theme sombre */
+body {
+    background-color: #1B262C;
+    color: #E0DACA;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #D4976A;
+}
+
+p, span, div, li, td {
+    color: #E0DACA;
+}
+
+/* header */
+header {
+    background: linear-gradient(135deg, #0F4C75 0%, #000000 100%);
+}
+
+/* navig */
+nav {
+    background: linear-gradient(to right, #903C16, #C66B3D);
+}
+
+/* Containers et cartes */
+.container {
+    background-color: #1B262C;
+}
+
+.form-container, .profile-section, .trip-card, .etape-card, 
+.admin-table, .payment-summary, .payment-form {
+    background-color: #333333;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+/* label et textes dans les formulaires */
+label {
+    color: #D4976A;
+}
+
+.form-group span {
+    color: #E0DACA;
+}
+
+
+/* form */
+input, select, textarea {
+    background-color: #444444;
+    color: #E0DACA;
+    border-color: #555555;
+}
+
+input:focus, select:focus, textarea:focus {
+    background-color: #555555;
+    border-color: #C66B3D;
+}
+
+input::placeholder, select::placeholder, textarea::placeholder {
+    color: #999999;
+}
+
+/* buttons etc */
+button, .btn-customize, .btn-payment, .btn-proceed {
+    background: linear-gradient(to right, #903C16, #C66B3D);
+}
+
+button:hover, .btn-customize:hover, .btn-payment:hover, .btn-proceed:hover {
+    background: linear-gradient(to right, #C66B3D, #903C16);
+}
+
+/* img */
+.trip-image, .destination-image, .hero-image {
+    border-color: #C66B3D;
+    filter: brightness(0.9);
+}
+
+/* tab */
+.admin-table th {
+    background: linear-gradient(135deg, #0F4C75 0%, #000000 100%);
+}
+
+.admin-table tr:nth-child(even) {
+    background-color: #2A2A2A;
+}
+
+.admin-table tr:hover {
+    background-color: #444444;
+}
+
+/* le footer */
+footer {
+    background: linear-gradient(135deg, #0F4C75 0%, #000000 100%);
+}
+
+footer p {
+    color: #FFFFFF;
+}
+
+/* QUE PR LE VOYAGE */
+.etape-summary-card, .etape-customize-card {
+    background-color: #333333;
+}
+
+.options-container {
+    background-color: #2A2A2A;
+}
+
+.option-item {
+    color: #E0DACA;
+}
+
+.option-price {
+    color: #D4976A;
+}
+
+/* msg */
+.success-message {
+    background-color: #2A3B2A;
+    border-color: #4CAF50;
+}
+
+.error-message {
+    background-color: #3B2A2A;
+    border-color: #F44336;
+}
+
+/* theme boutons */
+.theme-switcher-btn {
+    background: linear-gradient(to right, #0F4C75, #1B262C);
+}
+/* Panier */
+.panier-container {
+    background-color: #333333;
+    color: #E0DACA;
+    border: 1px solid #555555;
+}
+
+.panier-item {
+    border-bottom: 1px solid #555555;
+}
+
+.panier-item-titre, .panier-item-prix {
+    color: #E0DACA;
+}
+
+/* titre des voyages */
+.trip-card h3, .trip-header h2, .trip-header h3 {
+    color: #D4976A;
+}
+
+/* detail des voyages */
+.trip-description p, .etape-card p {
+    color: #E0DACA;
+}
+
+/* prix et informations */
+.total-price, .prix-total, .supplements {
+    color: #D4976A;
+}
+
+/* elements de formulaire personnalisés */
+.compteur-caracteres {
+    color: #AAAAAA;
+}
+
+.depasse-limite {
+    color: #FF6666;
+}
+
+/* class pour l'édition de profil */
+.en-edition .edit-input {
+    background-color: #444444;
+    color: #FFFFFF;
+    border: 1px solid #D4976A;
+}
+
+/* option de tri */
+.options-tri {
+    background-color: #333333;
+    color: #E0DACA;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.bouton-tri {
+    background-color: #444444;
+    color: #FFFFFF;
+    border: 1px solid #555555;
+    margin: 0 5px;
+}
+
+/* style pour les statuts user */
+.user-status {
+    color: #FFFFFF;
+}

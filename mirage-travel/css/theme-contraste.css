@@ -1,0 +1,163 @@
+/* Couleurs principales du theme contrasté */
+body {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #FFFF00;
+}
+
+p {
+    color: #FFFFFF;
+    font-size: 1.1rem;
+}
+
+/* header */
+header {
+    background: #000000;
+    border-bottom: 5px solid #FFFF00;
+}
+
+header h1 {
+    color: #FFFFFF;
+    font-size: 3rem;
+}
+
+/* nav */
+nav {
+    background: #000000;
+    border-bottom: 3px solid #FFFF00;
+}
+
+nav a {
+    color: #FFFF00;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #FFFF00;
+    color: #000000;
+}
+
+/* Containeurs et cartes */
+.container {
+    background-color: #000000;
+}
+
+.form-container, .profile-section, .trip-card, .etape-card, 
+.admin-table, .payment-summary, .payment-form {
+    background-color: #000000;
+    border: 2px solid #FFFF00;
+    box-shadow: none;
+}
+
+/* form */
+input, select, textarea {
+    background-color: #000000;
+    color: #FFFFFF;
+    border: 2px solid #FFFF00;
+    font-size: 1.1rem;
+}
+
+input:focus, select:focus, textarea:focus {
+    background-color: #000080;
+    border-color: #FFFFFF;
+}
+
+label {
+    color: #FFFF00;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* boutons */
+button, .btn-customize, .btn-payment, .btn-proceed {
+    background: #FFFF00;
+    color: #000000;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 2px solid #000000;
+}
+
+button:hover, .btn-customize:hover, .btn-payment:hover, .btn-proceed:hover {
+    background: #FFFFFF;
+    color: #000000;
+}
+
+/* img */
+.trip-image, .destination-image, .hero-image {
+    border: 4px solid #FFFF00;
+    filter: contrast(1.2);
+}
+
+/* tab */
+.admin-table th {
+    background: #FFFF00;
+    color: #000000;
+    font-size: 1.2rem;
+}
+
+.admin-table td {
+    border: 2px solid #FFFF00;
+    font-size: 1.1rem;
+}
+
+.admin-table tr:nth-child(odd) {
+    background-color: #000080;
+}
+
+.admin-table tr:nth-child(even) {
+    background-color: #000000;
+}
+
+.admin-table tr:hover {
+    background-color: #404040;
+}
+
+/* footer */
+footer {
+    background: #000000;
+    border-top: 3px solid #FFFF00;
+    color: #FFFFFF;
+    font-size: 1.1rem;
+}
+
+/* QUE PR LA PARTIE VOYAGE */
+.etape-summary-card, .etape-customize-card {
+    background-color: #000000;
+    border: 2px solid #FFFF00;
+}
+
+.options-container {
+    background-color: #000080;
+}
+
+/* msg */
+.success-message {
+    background-color: #004000;
+    color: #FFFFFF;
+    border: 2px solid #00FF00;
+    font-size: 1.2rem;
+}
+
+.error-message {
+    background-color: #400000;
+    color: #FFFFFF;
+    border: 2px solid #FF0000;
+    font-size: 1.2rem;
+}
+
+/* buottons de thème */
+.theme-switcher-btn {
+    background: #FFFF00;
+    color: #000000;
+    font-weight: bold;
+}
+
+/* aumenter la taille du texte pour meilleure lisibilité */
+body, p, div, span, a, li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}

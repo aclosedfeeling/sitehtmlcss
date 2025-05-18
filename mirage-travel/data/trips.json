@@ -1,0 +1,354 @@
+[
+    {
+      "id": 1,
+      "titre": "Traversée du Sahara",
+      "destination": "Maroc",
+      "image": "image2.jpg",
+      "date_debut": "2024-06-15",
+      "date_fin": "2024-06-22",
+      "duree": 7,
+      "prix_base": 1200,
+      "description": "Une aventure inoubliable à travers les dunes majestueuses du plus grand désert chaud du monde. Vivez l'expérience d'une nuit sous les étoiles et découvrez la culture berbère.",
+      "type": ["Aventure", "Culturel"],
+      "populaire": true,
+      "etapes": [
+        {
+          "titre": "Arrivée à Marrakech",
+          "lieu": "Marrakech",
+          "jour": 1,
+          "duree": 1,
+          "description": "Accueil à l'aéroport et installation à l'hôtel. Visite du souk et dîner de bienvenue.",
+          "options": {
+            "hebergement": [
+              {"nom": "Hôtel 3*", "prix": 0, "defaut": true},
+              {"nom": "Riad de luxe", "prix": 80, "defaut": false}
+            ],
+            "restauration": [
+              {"nom": "Demi-pension", "prix": 0, "defaut": true},
+              {"nom": "Pension complète", "prix": 30, "defaut": false}
+            ],
+            "activites": [
+              {"nom": "Visite guidée de la médina", "prix": 25, "defaut": false},
+              {"nom": "Soirée folklorique", "prix": 35, "defaut": false}
+            ]
+          }
+        },
+        {
+          "titre": "Traversée du Haut Atlas",
+          "lieu": "Ouarzazate",
+          "jour": 2,
+          "duree": 1,
+          "description": "Départ pour Ouarzazate en traversant le Haut Atlas. Visite de la kasbah d'Aït Ben Haddou.",
+          "options": {
+            "hebergement": [
+              {"nom": "Hôtel standard", "prix": 0, "defaut": true},
+              {"nom": "Hôtel avec piscine", "prix": 50, "defaut": false}
+            ],
+            "restauration": [
+              {"nom": "Demi-pension", "prix": 0, "defaut": true},
+              {"nom": "Pension complète", "prix": 25, "defaut": false}
+            ],
+            "activites": [
+              {"nom": "Visite du studio de cinéma", "prix": 20, "defaut": false},
+              {"nom": "Cours de photographie", "prix": 40, "defaut": false}
+            ],
+            "transport": [
+              {"nom": "4x4 partagé", "prix": 0, "defaut": true},
+              {"nom": "4x4 privatisé", "prix": 80, "defaut": false}
+            ]
+          }
+        },
+        {
+          "titre": "M'Hamid et les premières dunes",
+          "lieu": "M'Hamid",
+          "jour": 3,
+          "duree": 1,
+          "description": "Route vers M'Hamid, porte du désert. Première rencontre avec les dunes.",
+          "options": {
+            "hebergement": [
+              {"nom": "Campement standard", "prix": 0, "defaut": true},
+              {"nom": "Tente de luxe", "prix": 60, "defaut": false}
+            ],
+            "restauration": [
+              {"nom": "Pension complète", "prix": 0, "defaut": true}
+            ],
+            "activites": [
+              {"nom": "Balade à dos de dromadaire", "prix": 30, "defaut": true},
+              {"nom": "Initiation au sandboard", "prix": 25, "defaut": false}
+            ]
+          }
+        },
+        {
+          "titre": "Dunes de l'Erg Chigaga",
+          "lieu": "Erg Chigaga",
+          "jour": 4,
+          "duree": 2,
+          "description": "Journée complète d'exploration des grandes dunes. Nuit sous les étoiles.",
+          "options": {
+            "hebergement": [
+              {"nom": "Campement nomade", "prix": 0, "defaut": true},
+              {"nom": "Tente berbère privative", "prix": 70, "defaut": false}
+            ],
+            "restauration": [
+              {"nom": "Pension complète", "prix": 0, "defaut": true}
+            ],
+            "activites": [
+              {"nom": "Coucher de soleil dans les dunes", "prix": 0, "defaut": true},
+              {"nom": "Soirée astronomie", "prix": 40, "defaut": false},
+              {"nom": "Cours de cuisine berbère", "prix": 35, "defaut": false}
+            ]
+          }
+        },
+        {
+          "titre": "Oasis de Foum Zguid",
+          "lieu": "Foum Zguid",
+          "jour": 6,
+          "duree": 1,
+          "description": "Visite d'une oasis authentique. Rencontre avec les habitants.",
+          "options": {
+            "hebergement": [
+              {"nom": "Auberge locale", "prix": 0, "defaut": true},
+              {"nom": "Maison d'hôtes", "prix": 45, "defaut": false}
+            ],
+            "restauration": [
+              {"nom": "Demi-pension", "prix": 0, "defaut": true},
+              {"nom": "Pension complète", "prix": 20, "defaut": false}
+            ],
+            "activites": [
+              {"nom": "Visite du village", "prix": 0, "defaut": true},
+              {"nom": "Atelier artisanat local", "prix": 25, "defaut": false}
+            ],
+            "transport": [
+              {"nom": "4x4 standard", "prix": 0, "defaut": true},
+              {"nom": "4x4 confort", "prix": 40, "defaut": false}
+            ]
+          }
+        },
+        {
+          "titre": "Retour à Marrakech",
+          "lieu": "Marrakech",
+          "jour": 7,
+          "duree": 1,
+          "description": "Retour sur Marrakech. Temps libre pour les derniers achats.",
+          "options": {
+            "hebergement": [
+              {"nom": "Hôtel 3*", "prix": 0, "defaut": true},
+              {"nom": "Riad de luxe", "prix": 80, "defaut": false}
+            ],
+            "restauration": [
+              {"nom": "Petit-déjeuner", "prix": 0, "defaut": true},
+              {"nom": "Demi-pension", "prix": 25, "defaut": false},
+              {"nom": "Dîner de gala", "prix": 60, "defaut": false}
+            ],
+            "activites": [
+              {"nom": "Hammam traditionnel", "prix": 45, "defaut": false},
+              {"nom": "Shopping guidé", "prix": 30, "defaut": false}
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "titre": "Nuit sous les étoiles",
+      "destination": "Tunisie",
+      "image": "image3.jpg",
+      "date_debut": "2024-05-20",
+      "date_fin": "2024-05-23",
+      "duree": 3,
+      "prix_base": 650,
+      "description": "Découvrez le ciel nocturne comme jamais auparavant lors de cette expérience unique. Nos guides astronomes vous feront découvrir les constellations dans l'un des ciels les plus purs au monde.",
+      "type": ["Astronomie", "Bien-être"],
+      "populaire": true,
+      "etapes": [
+        {
+          "titre": "Arrivée à Tozeur",
+          "lieu": "Tozeur",
+          "jour": 1,
+          "duree": 1,
+          "description": "Accueil à l'aéroport et installation à l'hôtel. Préparation pour l'aventure nocturne.",
+          "options": {
+            "hebergement": [
+              {"nom": "Hôtel 3*", "prix": 0, "defaut": true},
+              {"nom": "Hôtel de charme", "prix": 60, "defaut": false}
+            ],
+            "restauration": [
+              {"nom": "Demi-pension", "prix": 0, "defaut": true},
+              {"nom": "Pension complète", "prix": 30, "defaut": false}
+            ],
+            "activites": [
+              {"nom": "Visite de la vieille ville", "prix": 25, "defaut": false}
+            ]
+          }
+        },
+        {
+          "titre": "Désert de Douz",
+          "lieu": "Douz",
+          "jour": 2,
+          "duree": 1,
+          "description": "Transfert vers Douz et installation au campement. Observation des étoiles avec un astronome.",
+          "options": {
+            "hebergement": [
+              {"nom": "Tente standard", "prix": 0, "defaut": true},
+              {"nom": "Tente panoramique", "prix": 80, "defaut": false}
+            ],
+            "restauration": [
+              {"nom": "Pension complète", "prix": 0, "defaut": true}
+            ],
+            "activites": [
+              {"nom": "Balade en dromadaire", "prix": 30, "defaut": false},
+              {"nom": "Atelier photo nocturne", "prix": 50, "defaut": false},
+              {"nom": "Soirée astronomie avec télescope", "prix": 0, "defaut": true}
+            ],
+            "transport": [
+              {"nom": "Transfert en 4x4", "prix": 0, "defaut": true},
+              {"nom": "Transfert en 4x4 privatisé", "prix": 70, "defaut": false}
+            ]
+          }
+        },
+        {
+          "titre": "Retour à Tozeur",
+          "lieu": "Tozeur",
+          "jour": 3,
+          "duree": 1,
+          "description": "Retour à Tozeur et temps libre avant le départ.",
+          "options": {
+            "hebergement": [
+              {"nom": "Hôtel 3*", "prix": 0, "defaut": true},
+              {"nom": "Hôtel de charme", "prix": 60, "defaut": false}
+            ],
+            "restauration": [
+              {"nom": "Petit-déjeuner", "prix": 0, "defaut": true},
+              {"nom": "Demi-pension", "prix": 25, "defaut": false}
+            ],
+            "activites": [
+              {"nom": "Visite des oasis", "prix": 35, "defaut": false}
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "titre": "Expédition Wadi Rum",
+      "destination": "Jordanie",
+      "image": "image 8.jpg",
+      "date_debut": "2024-07-10",
+      "date_fin": "2024-07-15",
+      "duree": 5,
+      "prix_base": 1500,
+      "description": "Explorez le magnifique désert de Jordanie connu pour ses formations rocheuses spectaculaires et ses couleurs flamboyantes. Une immersion complète dans un paysage à couper le souffle.",
+      "type": ["Aventure", "Photographique"],
+      "populaire": true,
+      "etapes": [
+        {
+          "titre": "Arrivée à Amman",
+          "lieu": "Amman",
+          "jour": 1,
+          "duree": 1,
+          "description": "Accueil à l'aéroport et installation à l'hôtel. Visite du centre historique d'Amman.",
+          "options": {
+            "hebergement": [
+              {"nom": "Hôtel 3*", "prix": 0, "defaut": true},
+              {"nom": "Hôtel 5*", "prix": 100, "defaut": false}
+            ],
+            "restauration": [
+              {"nom": "Demi-pension", "prix": 0, "defaut": true},
+              {"nom": "Pension complète", "prix": 35, "defaut": false}
+            ],
+            "activites": [
+              {"nom": "Visite de la Citadelle", "prix": 30, "defaut": false}
+            ]
+          }
+        },
+        {
+          "titre": "Transfert à Pétra",
+          "lieu": "Pétra",
+          "jour": 2,
+          "duree": 1,
+          "description": "Route vers Pétra. Visite du site archéologique emblématique.",
+          "options": {
+            "hebergement": [
+              {"nom": "Hôtel standard", "prix": 0, "defaut": true},
+              {"nom": "Hôtel vue sur site", "prix": 90, "defaut": false}
+            ],
+            "restauration": [
+              {"nom": "Demi-pension", "prix": 0, "defaut": true},
+              {"nom": "Pension complète", "prix": 30, "defaut": false}
+            ],
+            "activites": [
+              {"nom": "Pétra by night", "prix": 40, "defaut": false},
+              {"nom": "Guide archéologue", "prix": 70, "defaut": false}
+            ],
+            "transport": [
+              {"nom": "Transfert en bus", "prix": 0, "defaut": true},
+              {"nom": "Transfert privé", "prix": 80, "defaut": false}
+            ]
+          }
+        },
+        {
+          "titre": "Wadi Rum - Jour 1",
+          "lieu": "Wadi Rum",
+          "jour": 3,
+          "duree": 1,
+          "description": "Découverte du désert rouge de Wadi Rum. Safari en 4x4 et rencontre avec les Bédouins.",
+          "options": {
+            "hebergement": [
+              {"nom": "Campement bédouin", "prix": 0, "defaut": true},
+              {"nom": "Bubble tent", "prix": 120, "defaut": false}
+            ],
+            "restauration": [
+              {"nom": "Pension complète", "prix": 0, "defaut": true}
+            ],
+            "activites": [
+              {"nom": "Safari 4x4 demi-journée", "prix": 0, "defaut": true},
+              {"nom": "Safari 4x4 journée complète", "prix": 50, "defaut": false},
+              {"nom": "Escalade rochers", "prix": 40, "defaut": false}
+            ]
+          }
+        },
+        {
+          "titre": "Wadi Rum - Jour 2",
+          "lieu": "Wadi Rum",
+          "jour": 4,
+          "duree": 1,
+          "description": "Journée d'exploration des arches naturelles et des canyons. Nuit dans le désert.",
+          "options": {
+            "hebergement": [
+              {"nom": "Campement bédouin", "prix": 0, "defaut": true},
+              {"nom": "Bubble tent", "prix": 120, "defaut": false}
+            ],
+            "restauration": [
+              {"nom": "Pension complète", "prix": 0, "defaut": true}
+            ],
+            "activites": [
+              {"nom": "Randonnée guidée", "prix": 35, "defaut": false},
+              {"nom": "Coucher de soleil sur point culminant", "prix": 25, "defaut": false},
+              {"nom": "Soirée musique bédouine", "prix": 0, "defaut": true}
+            ]
+          }
+        },
+        {
+          "titre": "Retour à Amman",
+          "lieu": "Amman",
+          "jour": 5,
+          "duree": 1,
+          "description": "Route vers Amman. Dernier dîner traditionnel.",
+          "options": {
+            "hebergement": [
+              {"nom": "Hôtel 3*", "prix": 0, "defaut": true},
+              {"nom": "Hôtel 5*", "prix": 100, "defaut": false}
+            ],
+            "restauration": [
+              {"nom": "Demi-pension", "prix": 0, "defaut": true},
+              {"nom": "Dîner d'adieu", "prix": 45, "defaut": false}
+            ],
+            "transport": [
+              {"nom": "Transfert en bus", "prix": 0, "defaut": true},
+              {"nom": "Transfert privé", "prix": 80, "defaut": false}
+            ]
+          }
+        }
+      ]
+    }
+  ]
