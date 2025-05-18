@@ -250,6 +250,9 @@ if (isset($etape['options']) && isset($etape['options']['activites'])) {
     </div>
 </div>
 
+
+
 <?php
+
 include_once 'includes/footer.php';
 ?>
