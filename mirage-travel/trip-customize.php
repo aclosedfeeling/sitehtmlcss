@@ -45,11 +45,17 @@ foreach ($trip['etapes'] as $index => $etape) {
     
     // activité par def
     $chosenOptions[$index]['activites'] = array();
+    if (isset($etape['options']) && isset($etape['options']['activites']) && is_array($etape['options']['activites'])) {
+    $chosenOptions[$index]['activites'] = array();
     foreach ($etape['options']['activites'] as $activite) {
-        if ($activite['defaut']) {
+        if (isset($activite['defaut']) && $activite['defaut']) {
             $chosenOptions[$index]['activites'][] = $activite['nom'];
         }
     }
+} else {
+    // init avec tab vide si pas dactiviter
+    $chosenOptions[$index]['activites'] = array();
+}
     
     // transport par def (si ya)
     if (isset($etape['options']['transport'])) {
@@ -177,19 +183,38 @@ include_once 'includes/header.php';
                         
                         <div class="option-section">
                             <h5><i class="fas fa-hiking"></i> Activités</h5>
-                            <?php foreach ($etape['options']['activites'] as $activite): ?>
-                            <div class="option-item">
-                                <input type="checkbox" id="activite_<?php echo $index; ?>_<?php echo $activite['nom']; ?>" 
-                                       name="activite_<?php echo $index; ?>_<?php echo $activite['nom']; ?>"
-                                       <?php echo in_array($activite['nom'], $chosenOptions[$index]['activites']) ? 'checked' : ''; ?>>
-                                <label for="activite_<?php echo $index; ?>_<?php echo $activite['nom']; ?>">
-                                    <?php echo $activite['nom']; ?>
-                                    <?php if ($activite['prix'] > 0): ?>
-                                        <span class="option-price">(+<?php echo $activite['prix']; ?>€/pers.)</span>
-                                    <?php endif; ?>
-                                </label>
-                            </div>
-                            <?php endforeach; ?>
+                            <?php
+// Vérification basique avant le foreach
+if (isset($etape['options']) && isset($etape['options']['activites'])) {
+    foreach ($etape['options']['activites'] as $activite) {
+        // Code existant à l'intérieur de la boucle
+?>
+    <div class="option-item">
+        <input type="checkbox" id="activite_<?php echo $index; ?>_<?php echo $activite['nom']; ?>" 
+               name="activite_<?php echo $index; ?>_<?php echo $activite['nom']; ?>"
+               <?php 
+               // Vérification avant d'utiliser in_array
+               if (isset($chosenOptions[$index]) && isset($chosenOptions[$index]['activites'])) {
+                   echo in_array($activite['nom'], $chosenOptions[$index]['activites']) ? 'checked' : '';
+               }
+               ?>>
+        <label for="activite_<?php echo $index; ?>_<?php echo $activite['nom']; ?>">
+            <?php echo $activite['nom']; ?>
+            <?php 
+            // Vérification du prix
+            if (isset($activite['prix']) && $activite['prix'] > 0) {
+                echo '<span class="option-price">(+' . $activite['prix'] . '€/pers.)</span>';
+            }
+            ?>
+        </label>
+    </div>
+<?php
+    } // Fin du foreach
+} else {
+    // Message si aucune activité n'est disponible
+    echo '<p>Aucune activité disponible pour cette étape.</p>';
+}
+?>
                         </div>
                         
                         
@@ -224,94 +249,6 @@ include_once 'includes/header.php';
         </form>
     </div>
 </div>
-
-<style>
-    .trip-customize {
-        max-width: 900px;
-        margin: 0 auto;
-    }
-    
-    .trip-destination {
-        font-size: 1.2rem;
-        margin-bottom: 20px;
-    }
-    
-    .etapes-container {
-        margin-top: 30px;
-    }
-    
-    .etape-customize-card {
-        background-color: #FFFFFF;
-        padding: 20px;
-        border-radius: 8px;
-        margin-bottom: 20px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    
-    .options-container {
-        margin-top: 15px;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-    }
-    
-    .option-section {
-        margin-bottom: 15px;
-    }
-    
-    .option-section h5 {
-        margin-bottom: 10px;
-        color: #1B262C;
-        border-bottom: 1px solid #E0DACA;
-        padding-bottom: 5px;
-    }
-    
-    .option-item {
-        margin-bottom: 8px;
-    }
-    
-    .option-price {
-        color: #C66B3D;
-        font-size: 0.9em;
-    }
-    
-    .form-actions {
-        margin-top: 30px;
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-    }
-    
-    .btn-submit, .btn-cancel {
-        padding: 12px 24px;
-        border-radius: 5px;
-        font-weight: bold;
-        cursor: pointer;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-    }
-    
-    .btn-submit {
-        background: linear-gradient(to right, #C66B3D, #D4976A);
-        color: white;
-        border: none;
-    }
-    
-    .btn-submit:hover {
-        background: linear-gradient(to right, #D4976A, #C66B3D);
-    }
-    
-    .btn-cancel {
-        background: #1B262C;
-        color: white;
-        border: none;
-    }
-    
-    .btn-cancel:hover {
-        background: #2E4750;
-    }
-</style>
 
 <?php
 include_once 'includes/footer.php';

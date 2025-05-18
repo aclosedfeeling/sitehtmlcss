@@ -166,5 +166,107 @@
             "montant": "5640.00",
             "methode": "Carte Bancaire"
         }
+    },
+    {
+        "id": 4,
+        "user_id": 7,
+        "trip_id": 1,
+        "transaction_id": "MRG1747578272551",
+        "date_reservation": "2025-05-18",
+        "prix_total": "2960.00",
+        "nb_personnes": 2,
+        "date_depart": "2024-06-15",
+        "date_retour": "2024-06-22",
+        "statut": "pay\u00e9",
+        "options_choisies": [
+            {
+                "hebergement": "Riad de luxe",
+                "restauration": "Pension compl\u00e8te",
+                "activites": []
+            },
+            {
+                "hebergement": "H\u00f4tel avec piscine",
+                "restauration": "Demi-pension",
+                "activites": [],
+                "transport": "4x4 privatis\u00e9"
+            },
+            {
+                "hebergement": "Campement standard",
+                "restauration": "Pension compl\u00e8te",
+                "activites": []
+            },
+            {
+                "hebergement": "Campement nomade",
+                "restauration": "Pension compl\u00e8te",
+                "activites": []
+            },
+            {
+                "hebergement": "Auberge locale",
+                "restauration": "Demi-pension",
+                "activites": [],
+                "transport": "4x4 standard"
+            },
+            {
+                "hebergement": "Riad de luxe",
+                "restauration": "Petit-d\u00e9jeuner",
+                "activites": []
+            }
+        ],
+        "paiement": {
+            "date": "2025-05-18",
+            "montant": "2960.00",
+            "methode": "Carte Bancaire"
+        }
+    },
+    {
+        "id": 5,
+        "user_id": 6,
+        "trip_id": 1,
+        "transaction_id": "MRG1747599732226",
+        "date_reservation": "2025-05-18",
+        "prix_total": "1585.00",
+        "nb_personnes": 1,
+        "date_depart": "2024-06-15",
+        "date_retour": "2024-06-22",
+        "statut": "pay\u00e9",
+        "options_choisies": [
+            {
+                "hebergement": "Riad de luxe",
+                "restauration": "Pension compl\u00e8te",
+                "activites": []
+            },
+            {
+                "hebergement": "H\u00f4tel standard",
+                "restauration": "Demi-pension",
+                "activites": [],
+                "transport": "4x4 privatis\u00e9"
+            },
+            {
+                "hebergement": "Campement standard",
+                "restauration": "Pension compl\u00e8te",
+                "activites": []
+            },
+            {
+                "hebergement": "Tente berb\u00e8re privative",
+                "restauration": "Pension compl\u00e8te",
+                "activites": []
+            },
+            {
+                "hebergement": "Maison d'h\u00f4tes",
+                "restauration": "Demi-pension",
+                "activites": [],
+                "transport": "4x4 standard"
+            },
+            {
+                "hebergement": "Riad de luxe",
+                "restauration": "Petit-d\u00e9jeuner",
+                "activites": []
+            }
+        ],
+        "paiement": {
+            "date": "2025-05-18",
+            "montant": "1585.00",
+            "methode": "Carte Bancaire"
+        }
     }
 ]

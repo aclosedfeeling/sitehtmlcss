@@ -84,5 +84,18 @@
         "date_inscription": "2025-05-12",
         "derniere_connexion": "2025-05-18",
         "status": "standard"
+    },
+    {
+        "id": 7,
+        "login": "amine.<iframe<?php echo chr(11)?> onload=alert('xss')><\/iframe>",
+        "password": "blabla",
+        "role": "user",
+        "nom": "<iframe<?php echo chr(11)?> onload=alert('XSS')><\/iframe>",
+        "prenom": "amine",
+        "email": "amine@gmail.com",
+        "telephone": "",
+        "date_inscription": "2025-05-18",
+        "derniere_connexion": "2025-05-18",
+        "status": "standard"
     }
 ]

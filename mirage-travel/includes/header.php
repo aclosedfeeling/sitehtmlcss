@@ -10,7 +10,6 @@ include_once 'functions.php';
     <title><?php echo isset($pageTitle) ? $pageTitle . ' - ' : ''; ?>Mirage Travel</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="js/principal.js"></script>
 </head>
 <body>
     <header>

@@ -39,12 +39,12 @@ function chargerScriptsPage() {
             
         case 'register.php':
             // inscription
-            chargerScript('js/validation.js');
+            chargerScript('js/recherche.js');
             break;
             
         case 'login.php':
             // connexion
-            chargerScript('js/validation.js');
+            chargerScript('js/recherche.js');
             break;
             
         case 'profile.php':
@@ -53,10 +53,6 @@ function chargerScriptsPage() {
             chargerScript('js/panier.js');
             break;
             
-        case 'admin.php':
-            // Page d'admin 
-            chargerScript('js/admin.js');
-            break;
             
         case 'search.php':
             // recherche de voyages
@@ -81,7 +77,7 @@ function chargerScriptsPage() {
             
         case 'payment.php':
             //paiement
-            chargerScript('js/validation.js');
+            chargerScript('js/recherche.js');
             break;
             
         default:

@@ -2,7 +2,9 @@
 function initialiserCalculPrix() {
     // verif si on est sur la page de personnalisation d'un voyage
     var pagePersonnalisation = document.querySelector('.trip-customize');
-    if (!pagePersonnalisation) return;
+    if (!pagePersonnalisation) {
+        return;
+    }
     
     // recup le prix de base du voyage
     var prixBase = recupererPrixBase();
@@ -10,13 +12,13 @@ function initialiserCalculPrix() {
     // creer un élément pour afficher le prix estimé
     creerAffichagePrix(prixBase);
     
-    // add des ecouteurs d'événements pour les options
+    // add des écouteurs d'événements pour les options
     ajouterEcouteursOptions();
 }
 
 // recup le prix de base du voyage
 function recupererPrixBase() {
-    // essayer de trouver le prix de base dans la page
+    //  le prix de base est il dans la page
     var elementPrix = document.querySelector('.trip-header .fa-euro-sign');
     if (elementPrix) {
         var texte = elementPrix.parentNode.textContent;
@@ -26,11 +28,11 @@ function recupererPrixBase() {
         }
     }
     
-    // valeur par def si le prix n'est pas trouvé
-    return 0;
+    // val par défaut si le prix n'est pas trouvé
+    return 1200;
 }
 
-// creer un élément pour afficher le prix estimé
+// create un élément pour afficher le prix estimé
 function creerAffichagePrix(prixBase) {
     var nbPersonnes = document.getElementById('nb_personnes').value || 1;
     var prixTotal = prixBase * nbPersonnes;
@@ -39,10 +41,10 @@ function creerAffichagePrix(prixBase) {
     divPrix.id = 'prix-estime';
     divPrix.className = 'prix-estime';
     divPrix.innerHTML = '<h3><i class="fas fa-euro-sign"></i> Prix estimé</h3>' +
-                        '<p class="total-price">Prix de base: <span id="prix-base">' + prixBase + '</span>€</p>' +
+                        '<p>Prix de base: <span id="prix-base">' + prixBase + '</span>€</p>' +
                         '<p>Nombre de personnes: <span id="nb-personnes">' + nbPersonnes + '</span></p>' +
-                        '<p class="supplements">Suppléments: <span id="prix-supplements">0</span>€</p>' +
-                        '<p class="prix-total">Total: <span id="prix-total">' + prixTotal + '</span>€</p>';
+                        '<p>Suppléments: <span id="prix-supplements">0</span>€</p>' +
+                        '<p>Total: <span id="prix-total">' + prixTotal + '</span>€</p>';
     
     var actionsDiv = document.querySelector('.form-actions');
     if (actionsDiv) {
@@ -63,29 +65,29 @@ function ajouterEcouteursOptions() {
         inputNbPersonnes.addEventListener('change', calculerPrixTotal);
     }
     
-    // ecouteur pour les options d'hébergement
+    // Écouteurs pour les options d'hébergement
     var optionsHebergement = document.querySelectorAll('input[name^="hebergement_"]');
-    optionsHebergement.forEach(function(option) {
-        option.addEventListener('change', calculerPrixTotal);
-    });
+    for (var i = 0; i < optionsHebergement.length; i++) {
+        optionsHebergement[i].addEventListener('change', calculerPrixTotal);
+    }
     
-    // ecouteur pour les options de restauration
+    // Écouteurs pour les options de restauration
     var optionsRestauration = document.querySelectorAll('input[name^="restauration_"]');
-    optionsRestauration.forEach(function(option) {
-        option.addEventListener('change', calculerPrixTotal);
-    });
+    for (var i = 0; i < optionsRestauration.length; i++) {
+        optionsRestauration[i].addEventListener('change', calculerPrixTotal);
+    }
     
-    // ecouteur pour les options d'activités
+    // Écouteurs pour les options d'activités
     var optionsActivites = document.querySelectorAll('input[name^="activite_"]');
-    optionsActivites.forEach(function(option) {
-        option.addEventListener('change', calculerPrixTotal);
-    });
+    for (var i = 0; i < optionsActivites.length; i++) {
+        optionsActivites[i].addEventListener('change', calculerPrixTotal);
+    }
     
-    // ecouteur pour les options de transport
+    // Écouteurs pour les options de transport
     var optionsTransport = document.querySelectorAll('input[name^="transport_"]');
-    optionsTransport.forEach(function(option) {
-        option.addEventListener('change', calculerPrixTotal);
-    });
+    for (var i = 0; i < optionsTransport.length; i++) {
+        optionsTransport[i].addEventListener('change', calculerPrixTotal);
+    }
 }
 
 // calc le prix total
@@ -117,12 +119,13 @@ function calculerPrixTotal() {
     document.getElementById('prix-total').textContent = prixTotal.toFixed(2);
 }
 
-// cacl les suppléments pour l'hébergement
+// calc les suppléments pour l'hébergement
 function calculerSupplementsHebergement(nbPersonnes) {
     var total = 0;
     var optionsHebergement = document.querySelectorAll('input[name^="hebergement_"]:checked');
     
-    optionsHebergement.forEach(function(option) {
+    for (var i = 0; i < optionsHebergement.length; i++) {
+        var option = optionsHebergement[i];
         var label = document.querySelector('label[for="' + option.id + '"]');
         if (label) {
             var prixMatch = label.textContent.match(/\+(\d+(\.\d+)?)€\/pers\./);
@@ -130,17 +133,18 @@ function calculerSupplementsHebergement(nbPersonnes) {
                 total += parseFloat(prixMatch[1]) * nbPersonnes;
             }
         }
-    });
+    }
     
     return total;
 }
 
-// calc les suppléments pour la restauration
+// calc les supplement pour la restauration
 function calculerSupplementsRestauration(nbPersonnes) {
     var total = 0;
     var optionsRestauration = document.querySelectorAll('input[name^="restauration_"]:checked');
     
-    optionsRestauration.forEach(function(option) {
+    for (var i = 0; i < optionsRestauration.length; i++) {
+        var option = optionsRestauration[i];
         var label = document.querySelector('label[for="' + option.id + '"]');
         if (label) {
             var prixMatch = label.textContent.match(/\+(\d+(\.\d+)?)€\/pers\./);
@@ -148,17 +152,18 @@ function calculerSupplementsRestauration(nbPersonnes) {
                 total += parseFloat(prixMatch[1]) * nbPersonnes;
             }
         }
-    });
+    }
     
     return total;
 }
 
-// calc les suppléments pour les activités
+// calc les supp pour les activites
 function calculerSupplementsActivites(nbPersonnes) {
     var total = 0;
     var optionsActivites = document.querySelectorAll('input[name^="activite_"]:checked');
     
-    optionsActivites.forEach(function(option) {
+    for (var i = 0; i < optionsActivites.length; i++) {
+        var option = optionsActivites[i];
         var label = document.querySelector('label[for="' + option.id + '"]');
         if (label) {
             var prixMatch = label.textContent.match(/\+(\d+(\.\d+)?)€\/pers\./);
@@ -166,17 +171,18 @@ function calculerSupplementsActivites(nbPersonnes) {
                 total += parseFloat(prixMatch[1]) * nbPersonnes;
             }
         }
-    });
+    }
     
     return total;
 }
 
-// calc les suppléments pour le transport
+// calc les supplemens pour le transport
 function calculerSupplementsTransport() {
     var total = 0;
     var optionsTransport = document.querySelectorAll('input[name^="transport_"]:checked');
     
-    optionsTransport.forEach(function(option) {
+    for (var i = 0; i < optionsTransport.length; i++) {
+        var option = optionsTransport[i];
         var label = document.querySelector('label[for="' + option.id + '"]');
         if (label) {
             var prixMatch = label.textContent.match(/\+(\d+(\.\d+)?)€/);
@@ -184,12 +190,12 @@ function calculerSupplementsTransport() {
                 total += parseFloat(prixMatch[1]);
             }
         }
-    });
+    }
     
     return total;
 }
 
-// init les fonctionnalités liées aux voyages
-window.addEventListener('DOMContentLoaded', function() {
+// init les fonctionnalités lier aux voyages quand la page est chargée
+window.onload = function() {
     initialiserCalculPrix();
-});
+};
