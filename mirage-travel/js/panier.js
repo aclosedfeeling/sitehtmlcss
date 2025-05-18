@@ -1,10 +1,6 @@
 // init la gestion du panier
 function initialiserPanier() {
-    // verif si l'utilisateur est connecté
-    if (!document.querySelector('a[href="logout.php"]')) {
-        // si l'utilisateur est pas co, ne pas initialiser le panier
-        return;
-    }
+    // SUPPRESSION de la vérif utilisateur connecté
     
     // creer l'icône du panier dans la navigation
     creerIconePanier();
@@ -272,6 +268,4 @@ function retirerDuPanier(voyageId) {
 }
 
 // init les fctionnaliter du panier
-window.addEventListener('DOMContentLoaded', function() {
-    initialiserPanier();
-});
+initialiserPanier();
